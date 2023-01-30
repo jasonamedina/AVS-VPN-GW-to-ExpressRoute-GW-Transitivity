@@ -25,7 +25,7 @@ Create a subnet in your vNET called exactly RouteServerSubnet. The minimum size 
 ## Step 4: Deploy Azure Route Server
 - Create an Azure Route Server in the RouteServerSubnet  
 
-Create a Route Server  
+**Create a Route Server**   
 https://learn.microsoft.com/en-us/azure/route-server/quickstart-configure-route-server-portal#create-a-route-server-1  
 
 ![image](https://user-images.githubusercontent.com/97964083/215504753-220f176f-b5e5-4f9f-947f-f5f5861fa2a1.png)
@@ -34,7 +34,7 @@ https://learn.microsoft.com/en-us/azure/route-server/quickstart-configure-route-
 ## Step 5: Enable Azure Route Server Branch-to-Branch
 On Azure Enable Branch-To-Branch  
 
-Configure Route Exchange  
+**Configure Route Exchange**  
 https://learn.microsoft.com/en-us/azure/route-server/quickstart-configure-route-server-portal#configure-route-exchange  
 
 ![image](https://user-images.githubusercontent.com/97964083/215505504-8327ac13-bc2e-42f1-a7e8-1da61db015e9.png)
@@ -67,6 +67,6 @@ Configure BGP On-Premise and confirm BGP neighbor is up.
 ## Step 10: Connect AVS back to vNET
 Connect AVS Managed ExpressRoute back to your ExpressRoute GW. 
 
-Use an existing virtual network gateway  
+**Use an existing virtual network gateway**   
 https://learn.microsoft.com/en-us/azure/azure-vmware/deploy-azure-vmware-solution?tabs=azure-portal#use-an-existing-virtual-network-gateway  
 

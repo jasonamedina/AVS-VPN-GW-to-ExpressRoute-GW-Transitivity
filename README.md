@@ -19,16 +19,22 @@ https://learn.microsoft.com/en-us/azure/expressroute/expressroute-howto-add-gate
 Create a subnet in your vNET called exactly RouteServerSubnet. The minimum size of this subnet needs to be a /27. 
 
 ## Step 4: Deploy Azure Route Server
-Create an Azure Route Server in the RouteServerSubnet
+- Create an Azure Route Server in the RouteServerSubnet  
+
+Create a Route Server  
+https://learn.microsoft.com/en-us/azure/route-server/quickstart-configure-route-server-portal#create-a-route-server-1  
+
+![image](https://user-images.githubusercontent.com/97964083/215504753-220f176f-b5e5-4f9f-947f-f5f5861fa2a1.png)
+![image](https://user-images.githubusercontent.com/97964083/215504930-38a991cc-eb84-400c-8306-ecc43aded0a3.png)
 	
-Create a Route Server
-https://learn.microsoft.com/en-us/azure/route-server/quickstart-configure-route-server-portal#create-a-route-server-1
-
 ## Step 5: Enable Azure Route Server Branch-to-Branch
-On Azure Enable Branch-To-Branch
+On Azure Enable Branch-To-Branch  
 
-Configure Route Exchange
-https://learn.microsoft.com/en-us/azure/route-server/quickstart-configure-route-server-portal#configure-route-exchange
+Configure Route Exchange  
+https://learn.microsoft.com/en-us/azure/route-server/quickstart-configure-route-server-portal#configure-route-exchange  
+
+![image](https://user-images.githubusercontent.com/97964083/215505504-8327ac13-bc2e-42f1-a7e8-1da61db015e9.png)
+
 	
 ## Step 6:Configure BGP on VPN Gateway	
 - Go to your VPN Gateway and under Settings>Configuration. 

@@ -40,11 +40,13 @@ https://learn.microsoft.com/en-us/azure/route-server/quickstart-configure-route-
 
 
 ## Step 7: Configure BGP on Local Network Gateway
-Local Network Gateway and click Yes "Configure BGP Settings"
-	ASN: On-Premise ASN
-	BGP Peer IP Address: On-Premise BGP Peer Address
-	Address Space: /32
-	Click save
+- Local Network Gateway and click Yes "Configure BGP Settings"
+- ASN: On-Premise ASN
+- BGP Peer IP Address: On-Premise BGP Peer Address
+- Address Space: /32
+- Click save
+![image](https://user-images.githubusercontent.com/97964083/215502946-48364f6e-39f1-4a35-80fd-29f9f8833ec7.png)
+
 
 ## Step 8: Enable BGP on VPN Connection
 Under VPN Gateway Settings>Connections. Double Click on your VPN Connection. 

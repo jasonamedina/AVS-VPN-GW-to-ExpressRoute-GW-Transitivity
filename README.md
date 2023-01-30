@@ -1,6 +1,9 @@
 # Azure VMWare Solution: VPN GW to ExpressRoute GW Transitivity
 ![image](https://user-images.githubusercontent.com/97964083/214078217-86c26773-6339-4ea3-a1ca-0f35291b25ea.png)
 
+## Description
+This design scenario is only intended for customers who do not have ExpressRoute and only use a Site to Site VPN connection back to Azure. AVS only uses an Azure managed ExpressRoute to connect back to Azure. This is a step-by-step guide on how to connect On-Premise to the AVS private cloud transiting a Site to Site VPN to an AVS managed ExpressRoute and vice versa.
+
 ## Prerequisites  
 1. Already have an existing Site-to-Site VPN Connection back to Azure  
 https://learn.microsoft.com/en-us/azure/vpn-gateway/tutorial-site-to-site-portal
@@ -62,7 +65,8 @@ Click Save
 ![image](https://user-images.githubusercontent.com/97964083/215503579-faad957e-0803-4b05-b4e9-c763b58e532d.png)
 
 ## Step 9: Configure On-Premise BGP
-Configure BGP On-Premise and confirm BGP neighbor is up.
+- Configure BGP On-Premise and confirm BGP neighbor is up. 
+- Make sure to advertise via BGP your on-premise routes back to Azure. Use BGP Route Summarization when advertising routes to Azure because as of the date of this writing there is currently a 200 route limit exchange between ExpressRoute and VPN Gateway. If exceeded, BGP peerings on Route Server will go into a down state.  
 
 ## Step 10: Connect AVS back to vNET
 Connect AVS Managed ExpressRoute back to your ExpressRoute GW. 
@@ -70,3 +74,8 @@ Connect AVS Managed ExpressRoute back to your ExpressRoute GW.
 **Use an existing virtual network gateway**   
 https://learn.microsoft.com/en-us/azure/azure-vmware/deploy-azure-vmware-solution?tabs=azure-portal#use-an-existing-virtual-network-gateway  
 
+## Notes
+When using HCX with a Site to Site VPN connection, please take into the account the IPSEC overhead. The Uplink Network Profiles MTU should be set to 1350 or lower. This change needs to be completed on both the HCX on-premise and HCX Cloud Uplink Network Profiles. 
+![image](https://user-images.githubusercontent.com/97964083/215516121-70edb806-9d12-4363-89bf-b4c77313f409.png)
+
+https://learn.microsoft.com/en-us/azure/azure-vmware/configure-vmware-hcx#create-network-profiles

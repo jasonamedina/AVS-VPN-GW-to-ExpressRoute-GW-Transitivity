@@ -37,25 +37,26 @@ https://learn.microsoft.com/en-us/azure/route-server/quickstart-configure-route-
 - Click Save
 ![image](https://user-images.githubusercontent.com/97964083/215501023-d2710b78-62d0-434b-afcc-15fcecf3876f.png)
 
-
-
 ## Step 7: Configure BGP on Local Network Gateway
 - Local Network Gateway and click Yes "Configure BGP Settings"
 - ASN: On-Premise ASN
 - BGP Peer IP Address: On-Premise BGP Peer Address
-- Address Space: /32
+- Address Space: Delete all subnets and add /32 of BGP On-Premise Peer Address
 - Click save
 ![image](https://user-images.githubusercontent.com/97964083/215502946-48364f6e-39f1-4a35-80fd-29f9f8833ec7.png)
-
 
 ## Step 8: Enable BGP on VPN Connection
 Under VPN Gateway Settings>Connections. Double Click on your VPN Connection. 
 Go Under Settings>Configuration Enable BGP. 
 Click Save
+![image](https://user-images.githubusercontent.com/97964083/215503579-faad957e-0803-4b05-b4e9-c763b58e532d.png)
 
 ## Step 9: Configure On-Premise BGP
 Configure BGP On-Premise and confirm BGP neighbor is up.
 
 ## Step 10: Connect AVS back to vNET
-Connect AVS Managed ExpressRoute back to your ExpressRoute GW.
+Connect AVS Managed ExpressRoute back to your ExpressRoute GW. 
+
+Use an existing virtual network gateway  
+https://learn.microsoft.com/en-us/azure/azure-vmware/deploy-azure-vmware-solution?tabs=azure-portal#use-an-existing-virtual-network-gateway  
 

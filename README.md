@@ -1,6 +1,10 @@
 # Azure VMWare Solution: VPN GW to ExpressRoute GW Transitivity
 ![image](https://user-images.githubusercontent.com/97964083/214078217-86c26773-6339-4ea3-a1ca-0f35291b25ea.png)
 
+## Prerequisites  
+1. Already have an existing Site-to-Site VPN Connection back to Azure  
+https://learn.microsoft.com/en-us/azure/vpn-gateway/tutorial-site-to-site-portal
+
 ## Step 1: Create ExpressRoute Gateway
 Deploy a new ExpressRoute Gateway in the same vNET where your current VPN Gateway is located. This new ExpressRoute Gateway will live in the same "GatewaySubnet" as your VPN Gateway.  
 

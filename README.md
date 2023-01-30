@@ -23,7 +23,7 @@ https://learn.microsoft.com/en-us/azure/expressroute/expressroute-howto-add-gate
 ![image](https://user-images.githubusercontent.com/97964083/215498428-e7a264d4-5c8c-4ae2-a65c-db9f9834561b.png)
 		
 ## Step 3: Create RouteServerSubnet for Azure Route Server
-Create a subnet in your vNET called exactly RouteServerSubnet. The minimum size of this subnet needs to be a /27. 
+Create a subnet with the exact name of RouteServerSubnet. The minimum size of this subnet needs to be a /27. 
 
 ## Step 4: Deploy Azure Route Server
 - Create an Azure Route Server in the RouteServerSubnet  

@@ -66,7 +66,7 @@ Click Save
 
 ## Step 9: Configure On-Premise BGP
 - Configure BGP On-Premise and confirm BGP neighbor is up. 
-- Make sure to advertise via BGP your on-premise routes back to Azure. Use BGP Route Summarization when advertising routes to Azure because as of the date of this writing there is currently a 200 route limit exchange between ExpressRoute and VPN Gateway. If exceeded, BGP peerings on Route Server will go into a down state.  
+- Make sure to advertise via BGP your on-premise routes back to Azure.  
 
 ## Step 10: Connect AVS back to vNET
 Connect AVS Managed ExpressRoute back to your ExpressRoute GW. 
